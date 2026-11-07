@@ -16,7 +16,7 @@ export const app = {
     // Main application endpoint
     if (url.pathname === "/") {
       return Response.json({
-        message: "Hello from Bun CI/CD Pipeline!",
+        message: "Hello from Bun CI/CD Pipeline",
         application: "CI/CD Demo",
         runtime: "Bun",
         status: "success",

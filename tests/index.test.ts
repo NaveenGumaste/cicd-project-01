@@ -10,7 +10,7 @@ describe("Bun CI/CD Application", () => {
 
     const data = await response.json();
 
-    expect(data.message).toBe("Hello from Bun CI/CD Pipeline");
+    expect(data.message).toBe("Hello from Bun CI/CD Pipeline!");
     expect(data.runtime).toBe("Bun");
     expect(data.status).toBe("success");
   });

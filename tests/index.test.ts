@@ -23,7 +23,11 @@ describe("Bun CI/CD Application", () => {
 
     const data = await response.json();
 
-    expect(data.status).toBe("healthy");
+    expect(data).toEqual({
+      status: "healthy",
+      message: "Application is running",
+      runtime: "Bun",
+    });
   });
 
   test("Unknown routes should return 404", async () => {

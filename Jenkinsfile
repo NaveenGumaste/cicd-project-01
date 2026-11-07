@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    triggers {
+        pollSCM('H/1 * * * *')
+    }
+
     environment {
         APP_NAME = 'bun-cicd-app'
         IMAGE_NAME = 'bun-cicd-project'

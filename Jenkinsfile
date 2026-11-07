@@ -60,7 +60,7 @@ pipeline {
 
                 sh '''
                     for i in $(seq 1 15); do
-                        if curl -fsS http://localhost:${APP_PORT}/health; then
+                        if curl -fsS http://host.docker.internal:${APP_PORT}/health; then
                             echo "Application deployment successful!"
                             exit 0
                         fi
